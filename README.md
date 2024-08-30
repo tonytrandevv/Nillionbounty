@@ -94,7 +94,7 @@ Open any kinds of browser and navigate to http://localhost:3000
 - Opened contributions for any issues are welcome!
 - 
 ### Licence
-This project is licensed under the MIT License - see the MIT file for details.
+This project is licensed under the MIT License - see the [MIT](https://choosealicense.com/licenses/mit/) file for details.
 
 MIT License
 
