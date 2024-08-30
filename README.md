@@ -16,12 +16,10 @@ In this project, a react component is provided to intergrate with a npm package 
 ## Installation
 Following these steps to install and run `add-keplr-button` package with your project.
 1. Installing the package via **npm** or **yarn**
-   ```bash
-npm i add-keplr-button --save
+   ```bash npm i add-keplr-button --save
 
 2. Import into your project
-   ```bash
-import { KeplrAddChainButton } from 'add-keplr-button' 
+   ```bash import { KeplrAddChainButton } from 'add-keplr-button' 
 
 3. Config the chainInfo
 - chainId: chainId in a form of {identifier}-{version} (ex. cosmoshub-4)
