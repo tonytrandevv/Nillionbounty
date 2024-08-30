@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# A React component allows user to add the Nilchain to Keplr Wallet
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
