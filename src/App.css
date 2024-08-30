@@ -1,10 +1,90 @@
+/* App.css */
+.title {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #4a00e0;
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(240, 233, 233, 0.5);
+  color: white;
+  text-align: center;
+  animation: backInRight 1s ease-out;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button, .keplr-button {
+  background-color: #ff6b81;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+button:hover, .keplr-button:hover {
+  background-color: #ff4757;
+  transform: translateY(-3px);
+}
+
+button:disabled, .keplr-button:disabled {
+  background-color: #ff4757;
+  cursor: not-allowed;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.error {
+  color: #ff6b81;
+}
+
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.scramble-text {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: all 5s ease;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,26 +93,17 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes fadeInAndChangeColor {
+  0% {
+    transform: translateX(100vw); /* Start off-screen to the right */
+    opacity: 0;
 }
-
-.App-link {
-  color: #61dafb;
+60% {
+    transform: translateX(-10vw); /* Move closer to its final position */
+    opacity: 1;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+100% {
+    transform: translateX(0); /* End at its final position */
+    opacity: 1;
+}
 }
