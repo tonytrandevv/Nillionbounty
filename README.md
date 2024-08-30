@@ -2,45 +2,52 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+In this project, a react component is provided to intergrate with a npm package that allows developers are easily to customize any blockchain within Cosmos ecosystem and add to Keplr Wallet.
 
-### `npm start`
+## Features
+- Adding Nillion chain to Keplr Wallet.
+- Allowing developers to customize chain information easily.
+- A friendly user interface with a configurable button to connect with Keplr Wallet.
+- Handling the chain addition process with errors and feedbacks.
+- Compatible with  the most popular browsers (Edge, Chrome, Firefox).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
+Following these steps to install and run `add-keplr-button` package with your project.
+1. Installing the package via **npm** or **yarn**
+   ```bash
+npm i add-keplr-button --save
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Import into your project
+   ```bash
+import { KeplrAddChainButton } from 'add-keplr-button' 
 
-### `npm test`
+3. Config the chainInfo
+- chainId: chainId in a form of {identifier}-{version} (ex. cosmoshub-4)
+- chainName: the name of the chain that will be displayed on the wallet
+- chainSymbolImageUrl: Image URL of the chain.
+  - https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/{chain-identifier}/{file-name}.png
+  - Please modify the chain-identifier and file-name from the link above and upload it.
+- rpc: URL of RPC endpoint of the chain
+- rest: URL of REST/API endpoint of the chain
+- nodeProvider: provide the details of the RPC/REST node providers
+  - name: name of the node provider
+  - email: email address of the node provider (To help other users reach out when there is an issue with the nodes’ status)
+  - website(optional): website address of the node provider
+- walletUrlForStaking(optional): the URL where the users are directed when they click on Staking button of the Keplr Wallet
+- bip44: BIP-44 coin type (118 highly recommended)
+- bech32Config: prefix used at the beginning of the address
+- currencies: the list of the supported currencies. If your chain uses replicated security, please place your main native token at the top of the currencies list.
+- feeCurrencies: the list of the tokens that are accepted by the validators for fees
+- stakeCurrency: the staking token of the chain. Remove this item if your chain does not support native staking (e.g. your chain uses replicated security) or does not have a staking token.
+- coinGeckoId(optional): the active API ID for Keplr to get the price from CoinGecko
+- features: any other features that are additionally supported by the chain
+  - cosmwasm: supports CosmWasm smart contracts
+  - secretwasm: supports WASM smart contracts of Secret Network
+  - eth-address-gen: supports EVM account generation
+  - eth-key-sign: supports EVM signatures
+  - axelar-evm-bridge: supports EVM bridge provided by Axelar Network
+  - osmosis-txfees: supports paying fees in other currencies on Osmosis
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
