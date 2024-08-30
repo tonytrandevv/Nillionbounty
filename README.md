@@ -5,7 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Overview
 
 In this project, a react component is provided to intergrate with a npm package that allows developers are easily to customize any blockchain within Cosmos ecosystem and add to Keplr Wallet.
-
+## Live Project
+- Website: https://nillion-add-nilchain-to-keplr.vercel.app/
+- Npm package: https://www.npmjs.com/package/add-keplr-button
 ## Features
 - Adding Nillion chain to Keplr Wallet.
 - Allowing developers to customize chain information easily.
@@ -52,4 +54,46 @@ Following these steps to install and run `add-keplr-button` package with your pr
   - axelar-evm-bridge: supports EVM bridge provided by Axelar Network
   - osmosis-txfees: supports paying fees in other currencies on Osmosis
 
+## Demo
 
+Following these steps to run project:
+
+#### 1. Clone the Repository
+
+Clone this repository:
+
+```bash
+git clone https://github.com/tonytrandevv/add-Nilchain-to-Keplr.git
+cd add-Nilchain-to-Keplr
+```
+
+#### 2. Install Dependencies
+
+Install the necessary dependencies:
+
+```bash
+npm install
+```
+
+#### 3. Start the Development Server
+
+Start the development server to run the demo:
+
+```bash
+npm run start
+```
+
+#### 4. Open the Web App
+Open any kinds of browser and navigate to http://localhost:3000
+
+#### 5. Interact with the Demo
+- Click the "Add NilChain to Keplr" button to prompt Keplr to add the NilChain Testnet. In case your browser have not installed the Keplr Wallet, the website will notice you to install.
+- After adding the chain, the app will fetch and show your NIL balance.
+
+
+### Contribution
+- Opened contributions for any issues are welcome!
+
+
+### Contact
+For any questions or support, please contact validachain@proton.me.
